@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saloni Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="main_container_heading">
+
+            <div class="main-heading">
+                <h1>Find element in an Array
+                </h1>
+            </div>
+        </div>
+        <div class="body-para">
+            <p>Dear readers,<br>
+                Let's now move to the next problem, that is <span class="bold-text"> ‘Find Element in an array’</span>
+                of chapter <span class="bold-text">‘array and functions’</span>. So, reader, if you have already done or
+                at least tried the previous question which was about the span of an array, then this one is going to be
+                as easy as pie for you. Just continue reading.</p>
+            <p><span class="bold-text">Understanding the Problem:</span><br>
+                Just like in the previous question, first of all you will get a number n, which indicates the length of
+                an array. Then you will get n more inputs corresponding to each index of the array. After that you will
+                be given one more input, <b>d</b> as <span class="bold-text">data</span>, for which you have to find, at
+                which index of array d is present. And in case d is not present in the array then you need to print
+                <b>-1</b>. You may also watch the <a href="https://youtu.be/awuSQW2F0AM"> video </a> for better
+                understanding of the question.</p>
+            <p>Before you move further, it is advised that you spend enough time to understand the question and give it
+                a fair try </p>
+            <p><span class="bold-text">Moving on:</span><br>
+                So first of all you will be writing an input statement for an integer n. This n, which represents length
+                of the array will be helpful in defining an array say ‘arr’. Now, you need to run a <span
+                    class="bold-text"> for loop on the array</span> with integer i, initialized to 0. Also satisfying
+                the condition i < n and with an increment of one to i, in each iteration and inside this for loop you
+                    will be taking input for ith element of array arr.</p><br>
+        </div>
+        <div class="body-coding">
+            <pre>
+ int n = scn.nextInt();
+ int[] arr = new int[n];
+ for (int i = 0; i &lt; n; i++) {
+ arr[i] = scn.nextInt();
+ }
+ int d = scn.nextInt();
+         </pre>
+         </div>
+        <div class="body-para">
+            <p>Let's assume, the user enters n as 5 in input and an array arr is initialized of length 5. So with the
+                help of a for loop, values to each index of the array will be allocated. Let’s say you assigned 1, 2, 8,
+                5 and 3 as values to corresponding indices of arr.
+            </p>
+            <p>
+
+                Moving further, now your aim is to find the index of data in array arr, you need to find min and max
+                values of the array. So give it a thought and try to figure out how you can find it.
+
+            </p>
+            <p>
+                Okay, if you couldn’t find it, don’t feel bad. Let’s look at it together.
+                So for finding the index of data, it is required that data is present in the array. To check this, you
+                need to apply a loop on the array, and using conditional<span class="bold-text"> ( if(d == arr[i] )
+                    )</span>, you can make sure that whether data is present in the array or not. Whenever, <span
+                    class="bold-text">( if(d == arr[i] ) )</span> this condition is satisfied, index i will be printed
+                and the return statement will restrict the further iterations of the loop and stop the execution.
+            </p><br>
+        </div>
+        <div class="body-coding">
+            <pre>
+for(int i = 0; i &lt; arr.length; i++){
+if(d == arr[i]){
+ System.out.println(i);
+ return;
+ }
+}
+ System.out.println(-1);
+         </pre>
+         </div>
+        <div class="body-img">
+            <img src="./Assests/WhatsApp Image 2021-08-04 at 10.39.52 PM.jpeg" alt="">
+            <img src="./Assests/WhatsApp Image 2021-08-04 at 10.40.32 PM.jpeg" alt="">
+        </div>
+        <div class="body-para">
+            <p>
+
+                And in case, a value equivalent to data is present more than once in a given array, then the first index
+                with value equal to data will be printed.
+                Also in case, where value equivalent to data is not present in the array then, after control comes out
+                of the for loop, -1 gets printed.
+                So reader, if you still face any problem in understanding this part, we advise you to watch [1:47-3:40]
+                portion of the video.
+
+            </p><br>
+            <p>
+                <span class="bold-text"> Complete code:</span><br>
+            </p><br>
+        </div>
+        <div class="body-coding">
+           <pre>
+import java.io.*;
+
+import java.util.*;
+            
+public class Main(
+ 
+ public static void main(String[] args) 
+ throws Exception
+ { 
+  Scanner scn = new Scanner (System.in);
+    int n = scn.nextInt(); 
+      int[] arr = new int[n];
+            
+   for (int i = 0; i < n; i++) {
+     
+  arr[i] = scn.nextInt();
+            
+   }
+            
+ int d = scn.nextInt();
+            
+for(int i = 0; i < arr.length; i++){
+            
+if(d == arr[i]){
+            
+System.out.println(i);
+            
+ return;
+            
+  }
+            
+ }
+            
+ System.out.println(-1);
+            
+ }
+        </pre>
+        </div>
+        <div class="body-para">
+            <p>
+                So reader, we hope you understood the solution. Don’t worry if you are not able to solve this problem by
+                yourself. However, if you still face any difficulties in the solution for the problem, you may check out
+                the complete solution <a href="https://youtu.be/3AcyounXhfg"> video</a>.
+
+            </p>
+            <p>
+                Stay motivated and don’t burden yourself with stress. Forgive yourself and be kind to yourself. Happy
+                coding!
+            </p>
+            <p><span class="bold-text">Contributed by:</span> Nikita Aggarwal
+            </p><br>
+        </div>
+    </div>
+</body>
+
+</html>
